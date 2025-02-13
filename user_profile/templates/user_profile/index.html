@@ -1,0 +1,23 @@
+{% extends 'user_profile/base.html' %}
+
+{% block content %}
+    <table class="table">
+        <tr>
+            <th scope="row">Username</th>
+            <td><code>{{ request.user.username }}</code></td>
+        </tr>
+        <tr>
+            <th scope="row">Given Name</th>
+            <td>{{ request.user.first_name }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Surname</th>
+            <td>{{ request.user.last_name }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Email</th>
+            <td><code>{{ request.user.email }}</code></td>
+        </tr> 
+    </table>
+    <p><a href="{% url 'profile:edit' %}">Edit your profile</a></p>
+{%  endblock %}

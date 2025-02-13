@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+
+    <title>Peter and Stephen's Brickinator 5000</title>
+</head>
+<body>
+    <div class="container my-5">
+        <div class="p-5 text-center bg-body-tertiary rounded-3">
+            <img class="mb-2" style="height: 5rem;" src="{% static 'img/lego-dark.svg' %}" alt="" />
+            <h1 class="text-body-emphasis">The Brickinator 5000</h1>
+            <p>Help Peter do whatever it is that Peter does for a living.</p>
+            <div class="d-inline-flex gap-2 mb-5">
+                <a class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill"
+                href="{% url 'dashboard:index' %}">Get Started</a>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">What is this?</h5>
+                        <p class="card-text">
+                            This project helps Peter and his associates design
+                            Lego mosaic art for purposes that only Peter truly understands.
+                            If you are one of those associates, contact Peter
+                            to get access.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Is this like Lego Art Remix?</h5>
+                        <p class="card-text">
+                            Yes, and it uses a lot of the same code. The difference is
+                            that this project lets you save in-progress work
+                            and choose the size of the squares that get
+                            assembled into the final mosaic. Also, it makes
+                            prettier PDF instructions.
+                        </p>
+                        <a href="https://lego-art-remix.com/" class="card-link">Lego Art Remix</a>
+                        <a href="https://github.com/debkbanerji/lego-art-remix" class="card-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">I want to download this.</h5>
+                        <p class="card-text">
+                            You probably don't. You almost certainly want to use
+                            the original
+                            <a href="https://lego-art-remix.com/">Lego Art Remix</a>,
+                            which runs entirely in your browser and doesn't require
+                            a server-side backend. That said, the project <em>is</em>
+                            on GitHub if you really need it.
+                        </p>
+                        <a href="#" class="card-link">Brickinator GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
