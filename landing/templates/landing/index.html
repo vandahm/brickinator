@@ -4,9 +4,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <meta name="description" content="It slices, dices, and makes Lego art!">
+    <meta property="og:title" content="The Brickinator 5000">
+    <meta property="og:description" content="It slices, dices, and makes Lego art!">
+    <meta property="og:image" content="{% static 'img/logo-green.png' %}">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
 
-    <title>Peter and Stephen's Brickinator 5000</title>
+    <title>The Brickinator 5000</title>
 </head>
 <body>
     <div class="container my-5">
@@ -22,8 +30,8 @@
         <div class="row mt-5">
             <div class="col-md-4">
                 <div class="card">
+                    <h4 class="card-header">What is this?</h4>
                     <div class="card-body">
-                        <h5 class="card-title">What is this?</h5>
                         <p class="card-text">
                             This project helps Peter and his associates design
                             Lego mosaic art for purposes that only Peter truly understands.
@@ -35,24 +43,24 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
+                    <h4 class="card-header">Is this like Lego Art Remix?</h4>
                     <div class="card-body">
-                        <h5 class="card-title">Is this like Lego Art Remix?</h5>
                         <p class="card-text">
-                            Yes, and it uses a lot of the same code. The difference is
-                            that this project lets you save in-progress work
-                            and choose the size of the squares that get
-                            assembled into the final mosaic. Also, it makes
-                            prettier PDF instructions.
+                            Yes, this includes a modified version of the Lego Art Remix app.
+                            Our version allows us to choose the size of the base plate squares, 
+                            and it saves in-progress work to the server. It also gives us more
+                            control over what the PDF instruction sheets look like. The catch
+                            is that Brickinator requires a server-side backend, while the original
+                            does not.
                         </p>
-                        <a href="https://lego-art-remix.com/" class="card-link">Lego Art Remix</a>
-                        <a href="https://github.com/debkbanerji/lego-art-remix" class="card-link">GitHub</a>
+                        <a href="https://lego-art-remix.com/" class="btn btn-primary">Lego Art Remix</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
+                    <h4 class="card-header">I want to download this!</h4>
                     <div class="card-body">
-                        <h5 class="card-title">I want to download this.</h5>
                         <p class="card-text">
                             You probably don't. You almost certainly want to use
                             the original
@@ -61,7 +69,7 @@
                             a server-side backend. That said, the project <em>is</em>
                             on GitHub if you really need it.
                         </p>
-                        <a href="https://github.com/vandahm/brickinator" class="card-link">Brickinator GitHub</a>
+                        <a href="https://github.com/vandahm/brickinator" class="btn btn-primary">Brickinator GitHub</a>
                     </div>
                 </div>
             </div>

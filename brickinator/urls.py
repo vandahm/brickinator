@@ -15,7 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf import settings
 from django.contrib.auth import views as auth_views
+from django.conf.urls.static import static
 from django.urls import include, path
 
 admin.site.site_header = "Brickinator Admin"
@@ -28,7 +30,6 @@ urlpatterns = [
     path('accounts/login/', auth_views.LoginView.as_view()),
     path('accounts/', include('accounts.urls')),
     
-    path('app/studio/', include('studio.urls')),
     path('app/profile/', include('user_profile.urls')),
 
     path('app/', include('dashboard.urls')),
@@ -38,4 +39,4 @@ urlpatterns = [
 
     # Generally, this should go last
     path('admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
